@@ -12,6 +12,5 @@ kg_agents/kg/templates/
 
 *.html
 *.zip
-*.jpg
 *.jpeg
 kg_agents/core/server.py
