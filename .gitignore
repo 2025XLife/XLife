@@ -11,12 +11,7 @@ kg_agents/sample/
 kg_agents/kg/templates/
 
 *.html
-*.json
 *.zip
-*.png
 *.jpg
 *.jpeg
-!src/hardware.png
-!src/xlife.png
 kg_agents/core/server.py
-!kg_agents/config.json

@@ -33,7 +33,7 @@
     - [Configuration Steps](#configuration-steps)
     - [Test Pipelines](#test-pipelines)
   - [2. 🧠 Diet/Exercise Sub-world model and Ranking Module](#2--dietexercise-sub-world-model-and-ranking-module)
-  - [3. 🛡️ Security Module](#3-️-security-module)
+  - [3. 🛡️ Safety Module](#3-️-safety-module)
   - [4. 🧬 Multi-omics Model](#4--multi-omics-model)
   - [5. 🥽 AR Deployment](#5--ar-deployment)
     - [Hardware / Platform](#hardware--platform)
@@ -112,7 +112,7 @@ cd neo4j-community-5.26.21/bin/
 
 ### 1. 🕸️ Lifestyle Prescription Generation Module
 
-The knowledge-graph-guided lifestyle prescription generation module generates personalized diet and exercise prescriptions by grounding LLM outputs in a hybrid vector-graph metabolic knowledge base, safeguarded by a security module that enforces clinical safety through semantic auditing and deterministic constraints.
+The knowledge-graph-guided lifestyle prescription generation module generates personalized diet and exercise prescriptions by grounding LLM outputs in a hybrid vector-graph metabolic knowledge base, safeguarded by a safety module that enforces clinical safety through semantic auditing and deterministic constraints.
 
 #### Configuration Steps
 
@@ -188,7 +188,7 @@ curl -X POST http://localhost:5000/api/v1/exercise/generate-only \
   -H "Content-Type: application/json" \
   -d '{args}'
 
-# Security module assess prescription
+# Safety module assess prescription
 curl -X POST http://localhost:5000/api/v1/safety/evaluate \
   -H "Content-Type: application/json" \
   -d '{
@@ -263,9 +263,9 @@ python main.py
 5.Multi-stage alignment. We follow the official [repo](https://github.com/eric-mitchell/direct-preference-optimization) to complete multi-stage alignment, enabling the model to output personalized lifestyle prescriptions.
 
 
-### 3. 🛡️ Security Module
+### 3. 🛡️ Safety Module
 
-A security module based on retrieval-augmented generation is designed to enforce safety constraints and reduce hallucination risk of lifestyle prescriptions. We use [Qwen3-8B](https://huggingface.co/collections/Qwen/qwen3) as the backbone. The designed system prompt is in `./security_module/prompt.json`.
+A safety module based on retrieval-augmented generation is designed to enforce safety constraints and reduce hallucination risk of lifestyle prescriptions. We use [Qwen3-8B](https://huggingface.co/collections/Qwen/qwen3) as the backbone. The designed system prompt is in  [kg_agents/sample_prompts.md](./kg_agents/sample_prompts.md).
 
 ### 4. 🧬 Multi-omics Model
 
@@ -401,3 +401,4 @@ A minimal, de-identified sample dataset containing representative CGM traces and
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+$$
