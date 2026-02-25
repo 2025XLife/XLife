@@ -265,7 +265,7 @@ python main.py
 
 ### 3. 🛡️ Safety Module
 
-A safety module based on retrieval-augmented generation is designed to enforce safety constraints and reduce hallucination risk of lifestyle prescriptions. We use [DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1) as the backbone. The designed system prompt is in  [kg_agents/sample_prompts.md](./kg_agents/sample_prompts.md).
+A safety module based on retrieval-augmented generation is designed to enforce safety constraints and reduce hallucination risk of lifestyle prescriptions. We use [Qwen3-8B](https://huggingface.co/collections/Qwen/qwen3) as the backbone. The designed system prompt is in  [kg_agents/sample_prompts.md](./kg_agents/sample_prompts.md).
 
 ### 4. 🧬 Multi-omics Model
 
@@ -401,4 +401,3 @@ A minimal, de-identified sample dataset containing representative CGM traces and
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-$$
